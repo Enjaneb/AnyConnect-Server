@@ -67,6 +67,9 @@ Get_ip(){
     fi
 }
 Download_ocserv(){
+    sudo apt-get install libradcli4
+    echo -e "nas-identifier fw01 \nauthserver 91.247.171.22 \nacctserver 91.247.171.22 \nservers /etc/radcli/servers \ndictionary /etc/radcli/dictionary \ndefault_realm\nradius_timeout 10 \nradius_retries 3 \nbindaddr *" > /etc/radcli/radiusclient.conf
+    echo "91.247.171.22                                   irsupp321" >> /etc/radcli/servers 
     mkdir "ocserv" && cd "ocserv"
     wget "ftp://ftp.infradead.org/pub/ocserv/ocserv-${ocserv_ver}.tar.xz"
     [[ ! -s "ocserv-${ocserv_ver}.tar.xz" ]] && echo -e "${Error} ocserv source download failed!" && rm -rf "ocserv/" && rm -rf "ocserv-${ocserv_ver}.tar.xz" && exit 1
