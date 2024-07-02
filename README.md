@@ -23,7 +23,7 @@ So if you are a democracy fighter or some stuff like that, **DO NOT USE THIS PRO
 ## Usage /使用方法：
 
 ```bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/sfc9982/AnyConnect-Server/main/ocserv.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/Enjaneb/AnyConnect-Server/main/ocserv.sh
 chmod +x ocserv.sh
 bash ocserv.sh
 ```
